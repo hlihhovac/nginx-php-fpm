@@ -10,7 +10,7 @@ for data structure explanation see [maxexcloo/nginx-php:README.md](https://githu
 
 for image build use
 
-    git pull https://github.com/hlihhovac/nginx-php-fpm.git
+    git clone https://github.com/hlihhovac/nginx-php-fpm.git
 
 then modify configs in /etc and /config as required
 
