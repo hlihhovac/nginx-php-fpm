@@ -9,7 +9,7 @@ ADD etc/apt /etc/apt
 
 RUN apt-get update && \
 	apt-get upgrade -y && \
-        apt-get install -yq ca-certificates inotify-tools nano pwgen supervisor unzip wget && \
+        apt-get install -yq ca-certificates inotify-tools nano pwgen supervisor unzip wget cron && \
 	apt-get clean && \
 	echo -n > /var/lib/apt/extended_states
 
@@ -43,6 +43,7 @@ RUN chmod +x /config/loop
 
 EXPOSE 80 443
 ADD supervisord.conf /etc/supervisor/conf.d/nginx.conf
+ADD vtiger.cron /etc/cron.d/vtiger
 
 CMD /config/loop
 
