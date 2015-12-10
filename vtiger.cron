@@ -1,0 +1,6 @@
+#
+# /etc/cron.d/vtiger cron config script
+# to run vtigercron.sh shell script
+#
+
+*/15 *  * * *    root    /bin/bash -c "/data/http/cron/vtigercron.sh >> /var/log/vtigercron.log 2>&1"
